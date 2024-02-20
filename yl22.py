@@ -1,31 +1,34 @@
 #Kivi-paber-käärid mäng. 
-#Arvuti mõtleb välja ühe variandi - kivi, paber või käärid. Arvuti küsib kasutaja valikut. Programm ütleb, kes võitis.
-#Täienda programmi nii, et mängitakse seni, kuni kasutaja ei taha enam mängida.
+# Arvuti mõtleb välja ühe variandi - kivi, paber või käärid. 
+# Arvuti küsib kasutaja valikut. Programm ütleb, kes võitis.
 
-def game_choices():
-    a = 'kivi'
-    b = 'paber'
-    c = 'käärid'
-    choices = [a,b,c]
+import random
 
-    from random import choice
-    computer = choice(choices)
-    user_input = input('Mängime kivi, paber, käärid. Mis sa valid?: ')
-    while user_input.lower() not in choices:
-        user_input = input('Ma ei saanud sinu valikust aru, palun kirjuta uuesti: ')
+def single_game():
+    
+    choose_from_here = ["kivi", "paber", "käärid"]
 
-    print('Mina valisin', computer + '. Sina valisid', user_input + '.')
-    return(computer, user_input)
+    computer_choice = random.choice(choose_from_here)
 
-def game_result(c,u)
-    if c == u:
-        print('Jäime viiki :)')
+    user_choice = input("Kivi, paber või käärid? ").lower()
+    print(user_choice)
 
-def game_new():
-    new_game = input('Kas tahad veel mängida? y/n: ')
-    return new_game == 'y'
-
-# a < b and a > c
-# b < c
-# a == a, b == b, 
-
+    while user_choice not in (choose_from_here):
+        user_choice = input("See polnud valikute hulgas. Paku uuesti. ").lower()
+        
+    # Who wins - VIIGI PUHUL LÄHEB computer-wins lappesse
+    
+    message1 = "Mul oli " + computer_choice + " ja sul oli " + user_choice + "."
+    
+    if computer_choice == user_choice:
+        message2 = "Jäime viiki."
+    elif computer_choice == choose_from_here[0] and user_choice == choose_from_here[1] or computer_choice == choose_from_here[1] and user_choice == choose_from_here[2] or computer_choice == choose_from_here[2] and user_choice == choose_from_here[0]:
+        message2 = "Palju õnne! Sina võitsid!"
+    else:
+        message2 = "Mina võitsin. Nanananaaa"
+        
+    print(message1 + "\n" + message2)       
+        
+single_game()
+    
+# Täienda programmi nii, et mängitakse seni, kuni kasutaja ei taha enam mängida.
