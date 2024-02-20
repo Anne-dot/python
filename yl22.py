@@ -28,7 +28,20 @@ def single_game():
         message2 = "Mina võitsin. Nanananaaa"
         
     print(message1 + "\n" + message2)       
-        
-single_game()
     
 # Täienda programmi nii, et mängitakse seni, kuni kasutaja ei taha enam mängida.
+
+def multigame():
+    
+    continue_playing = True
+    
+    while continue_playing:
+        single_game()
+        user_answer = input("Kas sa soovid uuesti mängida? y/n ").lower()
+        if user_answer != "y":
+            continue_playing = False
+    
+    print("Sinuga oli tore mängida :) Head aega!")
+
+#single_game()    
+multigame()
