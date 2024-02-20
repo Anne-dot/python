@@ -15,3 +15,4 @@ elif age == 18:
     print('Palju õnne täisealiseks saamise puhul!')
 else:
     print('Võid autot juhtida küll! Kui oled kaine.')
+    

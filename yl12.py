@@ -10,6 +10,7 @@
 # Sorteeri list ja väljasta
 # (jada, list, listi element, listi meetodid)
 
+
 fruits = ['apple', 'pear', 'plum'] #tegin listi
 print(fruits) #väljastasin listi
 print(fruits[0]) #1. element

@@ -1,6 +1,7 @@
 # Kirjuta programm, mis leiab kolmest kasutaja poolt sisestatud arvust maksimumi 
 # (ära kasuta max funktsiooni). (loogikatehted - logic operators)
 
+
 num1 = float(input('Sisesta üks arv: '))
 num2 = float(input('Sisesta veel üks arv: '))
 num3 = float(input('Sisesta kolmas ka: '))

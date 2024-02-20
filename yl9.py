@@ -3,6 +3,7 @@
 #kolmnurga liigi. Lisaks tuleb kontrollida, kas etteantud küljepikkustega kolmnurk saab 
 #üldse eksisteerida. Külje pikkused ei pea olema täisarvud. (ujukomaarv - float)
 
+
 a = float(input('Sisesta kolmnurga esimese külje pikkus: '))
 b = float(input('Sisesta kolmnurga teise külje pikkus: '))
 c = float(input('Sisesta kolmnurga kolmanda külje pikkus: '))

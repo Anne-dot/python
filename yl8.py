@@ -2,6 +2,7 @@
 #number.
 #Aasta on liigaasta kui ta jagub neljasajaga või jagub neljaga ja ei jagu sajaga.
 
+
 def leap_year(num):
 
     if not num%400 or (not num%4 and num%100):
