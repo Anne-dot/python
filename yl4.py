@@ -12,3 +12,4 @@ elif num1_f < num2_f:
     print(num1)
 else:
     print('Arvud on omavahel võrdsed.')
+    

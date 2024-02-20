@@ -8,4 +8,5 @@ int2 = int1 + int1
 int3 = int2 + int1
 answer = int(int1) + int(int2) + int(int3)
 
-print(int1, '+', int2, '+', int3, '=', answer)
+print(int1, '+', int2, '+', int3, '=', answer) 
+
