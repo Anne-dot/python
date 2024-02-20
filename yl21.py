@@ -3,6 +3,7 @@
 # Vale pakkumise korral annab arvuti vihje, kas pakkumine on õigest arvust suurem või väiksem. 
 # Pakkuda saab seni, kuni kasutaja on õige arvu pakkunud. (juhuarv - random)
 
+
 import random
 
 def user_guess(start_num, end_num):
