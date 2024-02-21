@@ -4,21 +4,60 @@
 # Kommentaarides on kah lahendused, aga proovi ise lahendada. 
 # Defineeri lisatasu arvutamise funktsioon. Sisendina defineeri dictionary.
 
-input_dict = {
+revenue_expenses = {
     "Revenue" : {
-        "users" : ["Frank", "Jane"],
-        "tea" : [120, 145],
-        "coffee": [243, 265],
+        "users" : ("Frank", "Jane"),
+        "tea" : (120, 145),
+        "coffee": (243, 265),
         },
     "Expenses" : {
-        "users" : ["Frank", "Jane"],
-        "tea" : [130, 59],
-        "coffee": [143, 198],
+        "users" : ("Frank", "Jane"),
+        "tea" : (130, 59),
+        "coffee": (143, 198),
         },
     }
 
-for i in input_dict:
-    print(input_dict[i])
+revenue, expenses = "Revenue", "Expenses"
+users = revenue_expenses[revenue]["users"]
+len_users = len(users)
+
+list_level2_keys = ()
+print_list = ()
+profit = []
+
+# fill profit with ceroes
+for i in range(len_users):
+    profit.append(0)
+
+# get keys for inner dictionaries
+for i in revenue_expenses["Revenue"]:
+    list_level2_keys += (i,)
+
+#print(users)
+#print(list_level2_keys)
+
+for i in list_level2_keys:
+    if i != "users":
+#        print(i)
+#        print(revenue_expenses[revenue][i])
+#        print(revenue_expenses[expenses][i])
+        for j in range(len_users):
+            profit_for_product = int(revenue_expenses[revenue][i][j]) - int(revenue_expenses[expenses][i][j])
+            if (profit_for_product > 0):
+                profit[j] += profit_for_product * 0.062
+#            profit = str(int(revenue_expenses[revenue][i][j] - int(revenue_expenses[expenses][i][j])))
+#            print(users[j] + " profit for ..." + ": " + profit)
+
+# Convert profit list of int -> list of str
+for i in range(len_users):
+    profit[i] = str(profit[i])
+
+print("\t\t" + "\t".join(users))    
+print("Commissions\t" + "\t".join(profit))    
+
+    
+def monthly_commissions(monthly_data):
+    return 
 
 # Description
 
@@ -33,7 +72,7 @@ for i in input_dict:
 # You'll be given two matrices showing the sales figure per salesperson for each product they sold, and the 
 # expenses by product per salesperson. Example: 
 
-"""Revenue 
+'''Revenue 
 
         Frank   Jane
 Tea       120    145
@@ -43,7 +82,8 @@ Expenses
 
         Frank   Jane
 Tea       130     59
-Coffee    143    198"""
+Coffee    143    198
+'''
 
 # Output Description
 
@@ -56,8 +96,8 @@ Commission       6.20   9.49
 
 # Challenge Input
 
-# Revenue
-"""
+ch_input = """ Revenue
+
             Johnver Vanston Danbree Vansey  Mundyke
 Tea             190     140    1926     14      143
 Coffee          325      19     293   1491      162
@@ -78,3 +118,19 @@ Milk             67     254      89    129       76
             Johnver Vanston Danbree Vansey  Mundyke
 Commission       92       5     113     45       32
 """
+print("\n")
+list_lines = ch_input.split("\n")
+dict_revenue = {}
+counter = 1
+for line in list_lines:
+    counter += 1
+#    print(counter)
+    if len(line.strip().split()) == 1:
+        print(line.strip())
+        counter = -1
+#        print(counter)
+    
+    elif counter == 1:
+        print(line)
+
+# ! kasuta readline ja siis tingimusi
