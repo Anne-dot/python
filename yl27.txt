@@ -1,0 +1,22 @@
+#https://medium.com/@carrascalx/i-wrote-a-python-program-calculate-the-most-commonly-used-words-in-subreddits-heres-what-i-found-584ff946a8dc
+
+#Loe läbi artikkel.
+
+#Kas suudad mõista ja selgitada, mis on API?
+Application programming interface — a software intermediary that allows two applications to talk to each other.
+APIs are an accessible way to extract and share data within and across organizations.
+
+#Kas suudad mõista ja selgitada, mis on pip?
+PIP is a package manager for Python packages, or modules if you like. 
+Note: If you have Python version 3.4 or later, PIP is included by default.
+
+#Kui saad aru, mis on PRAW, siis installi see ja testi, kas töötab. 
+(vihjed: https://praw.readthedocs.io/en/latest/getting_started/quick_start.html,
+ https://www.reddit.com/prefs/apps/,
+ https://www.reddit.com/r/redditdev/comments/5mzts3/what_do_you_put_in_for_redirect_uri_i_keep/)
+
+ PRAW: The Python Reddit API Wrapper. PRAW, an acronym for "Python Reddit API Wrapper", is a Python package 
+ that allows for simple access to Reddit's API. PRAW aims to be easy to use and internally follows all of 
+ Reddit's API rules. With PRAW there's no need to introduce sleep calls in your code.
+
+#Leia analoogselt artiklist kirjeldatule enim kasutatud sõnad r/Eesti sub-redditis.
