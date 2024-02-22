@@ -5,3 +5,11 @@
 #Millised on selle tegevuse eetilisuse ja viisakuse reeglid?
 #Tee ise artiklis kirjeldatud projekt läbi ja kirjuta programm.
 #Kohanda programmi Kuressaare Ametikooli tunniplaanist info kätte saamiseks.
+
+import urllib
+
+from bs3 import BeautifulSoup
+url = "enter_url_here"
+ourUrl = urllib3.PoolManager().request('GET', url).data
+soup = BeautifulSoup(ourUrl, "lxml")
+print(soup.find('title').text)
