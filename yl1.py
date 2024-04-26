@@ -3,7 +3,4 @@
 # ja väljastab ümardatud tulemuse. (round)
 krones = int(input('Sisesta summa kroonides, täisarvuna: '))
 krones_to_euro = round(krones/15.6466)
-redundant_variable = 0
 print(krones, 'kr on', krones_to_euro, '\N{euro sign}')
-
-#sjhdkahds
